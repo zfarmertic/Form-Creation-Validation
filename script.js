@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", ()=>{
     form = document.getElementById("registration-form")
 
-    form.addEventListener("submit", (e)=>{
-        e.preventDefault()
+    form.addEventListener("submit", (event)=>{
+        event.preventDefault()
 
         const feedbackDiv = document.getElementById("form-feedback");
 
-        const username = document.getElementById("username").value.trim();
+        const username = document.getElementById("username");
 
-        const email = document.getElementById("email").value.trim();
+        const email = document.getElementById("email");
 
-        const password = document.getElementById("password").value.trim();
+        const password = document.getElementById("password");
 
 
         let isValid = true;
