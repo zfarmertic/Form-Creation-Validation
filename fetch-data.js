@@ -16,20 +16,20 @@ const fetchUserData = async() =>{
         console.log(users)
         dataContainer.textContent = ''
 
-        const userList = document.createElement("ul");
+        const userList = document.createElement('ul');
 
         users.forEach(element => {
-            const li = document.createElement("li");
+            const li = document.createElement('li');
 
-            li.innerHTML= element["name"];
+            li.innerHTML= element['name'];
             console.log(li)
             userList.appendChild(li);
         });
         dataContainer.appendChild(userList);
 
     }catch(err){
-        dataContainer.textContent = " ";
-        dataContainer.textContent = "Failed to load user data."
+        dataContainer.textContent = ' ';
+        dataContainer.textContent = 'Failed to load user data.'
     }
 }
-document.addEventListener("DOMContentLoaded", fetchUserData)
+document.addEventListener('DOMContentLoaded', fetchUserData)
