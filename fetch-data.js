@@ -28,7 +28,8 @@ const fetchUserData = async() =>{
         dataContainer.appendChild(userList);
 
     }catch(err){
-        
+        dataContainer.textContent = " ";
+        dataContainer.textContent = "Failed to load user data."
     }
 }
 document.addEventListener("DOMContentLoaded", fetchUserData)
