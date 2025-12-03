@@ -14,7 +14,7 @@ async function fetchUserData() {
 
         const users = await response.json();
         console.log(users)
-        dataContainer.textContent = ''
+        dataContainer.innerHTML = ' '
 
         const userList = document.createElement('ul');
 
@@ -28,7 +28,7 @@ async function fetchUserData() {
         dataContainer.appendChild(userList);
 
     }catch(err){
-        dataContainer.textContent = ' ';
+        dataContainer.innerHTML = ' ';
         dataContainer.textContent = 'Failed to load user data.'
     }
 }
